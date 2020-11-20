@@ -1,0 +1,39 @@
+<mat-toolbar *ngIf="isDesktopDevice">
+  <div class="nav-items-container">
+    <img src="../../assets/images/logo.png">
+  <div>
+    <button mat-button class="warn">Product</button>
+    <button mat-button class="warn">Use Cases</button>
+    <button mat-button class="warn">Remote Work</button>
+    <button mat-button class="warn">Enterprise</button>
+    <button mat-button class="warn">Pricing</button>
+  </div>
+  <div>
+    <button mat-button class="warn">Contact Sales</button>
+    <button mat-button class="warn">Login</button>
+  </div>
+
+    <button mat-raised-button id="warn">Get Started  <span class="material-icons">
+      keyboard_arrow_right
+      </span></button>
+  </div>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="isMobile || isTablet" fxLayout="row" color="primary" class="toolbar">
+  <span><img src="../../assets/images/logo.png"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="dropMenu" style="margin-left: 59%; !important">
+      <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #dropMenu="matMenu">
+      <ng-container *ngFor="let item of menuItems">
+          <button mat-button fxLayout="row">
+              <mat-icon class="mr">{{item.icon}}</mat-icon>
+              {{item.label}}
+          </button>
+      </ng-container>
+  </mat-menu>
+</mat-toolbar>
+
+<app-about></app-about>
+<app-company-links></app-company-links>

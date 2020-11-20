@@ -1,0 +1,60 @@
+.container1
+    margin-top: 4%
+
+.container2
+    margin-left: 18%
+
+.container3
+    width: 55%
+
+.headline
+    font-weight: bold
+    font-size: xxx-large
+    width: 73%
+    color: #1d1b1b 
+    line-height: normal
+
+.paragraph
+    width: 70%
+    font-size: 17px
+    word-spacing: 2px
+    line-height: 25px
+    
+
+@media (min-width: 320px) and (max-width: 670px) 
+    .container1
+        flex-direction: column !important
+        box-sizing: border-box
+        display: flex
+        place-content: center space-evenly
+        align-items: center
+        margin-top: 100px
+
+    .container2 
+         margin-left: auto
+         text-align: -webkit-center
+         max-width: fit-content !important
+    
+    .headline
+        width: 100% !important
+
+    .container3
+        width: 100% !important
+    .paragraph
+        display: none
+    .logo
+       max-width: fit-content !important
+       
+@media (min-width: 768px) and (max-width: 1366px) 
+
+    .container1
+        margin-top: 16%
+    .container2 
+        margin-left: 12%
+    .container3
+        width: 72%
+    .paragraph
+        width: 100%
+    .headline
+        width: 100%
+
